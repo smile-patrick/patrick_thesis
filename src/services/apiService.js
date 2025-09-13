@@ -2,11 +2,7 @@ import axios from 'axios';
 
 // 默认值，将被用户自定义配置覆盖
 const DEFAULT_API_URL = 'https://voapi.killerbest.com';
-<<<<<<< HEAD
-const DEFAULT_API_KEY = 'sk-McarwsWe1KbApdcT8gkB6KmhsbNNUHvfz6C1LN7VjThovXpX'; // 替换为实际API密钥
-=======
 const DEFAULT_API_KEY = 'sk-3tApLUpL0kY6ddpiWc0cUFLCinzV1Q8iSREulB8v3WqTGhwc'; // 替换为实际API密钥
->>>>>>> 30d2114 (000)
 const DEFAULT_MODEL_NAME = 'gpt-4.1-mini';
 
 // 从本地存储获取API配置

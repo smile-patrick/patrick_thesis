@@ -1,11 +1,5 @@
 <template>
   <div class="article-optimizer">
-<<<<<<< HEAD
-    <h1>内容优化工具</h1>
-    <el-card class="optimizer-card">
-      <div class="input-section">
-        <h3>文章输入</h3>
-=======
     <!-- 欢迎区域 -->
     <div class="welcome-section">
       <h1 class="title gradient-text text-center">内容优化工具</h1>
@@ -42,7 +36,6 @@
           <h3 style="margin: 0;">文章输入</h3>
           <span style="color: #909399; font-size: 12px; margin-left: 10px; display: flex; align-items: center;">默认使用模型：gpt-4.1-mini</span>
         </div>
->>>>>>> 30d2114 (000)
         <el-input type="textarea" :rows="8" placeholder="请在此输入需要优化的文章内容..." v-model="inputText"
           class="fixed-textarea"></el-input>
       </div>
@@ -102,22 +95,6 @@
     <!-- API设置对话框 -->
     <el-dialog title="自定义API设置" :visible.sync="apiSettingsVisible" width="500px" :close-on-click-modal="false"
       class="api-settings-dialog">
-<<<<<<< HEAD
-      <el-form :model="apiSettings" label-width="120px" label-position="left">
-        <el-form-item label="API地址">
-          <el-input v-model="apiSettings.apiUrl" placeholder="如: https://api.example.com"></el-input>
-        </el-form-item>
-
-        <el-form-item label="API密钥">
-          <el-input v-model="apiSettings.apiKey" placeholder="请输入API密钥，通常以sk-开头" show-password></el-input>
-        </el-form-item>
-
-        <el-form-item label="模型名称">
-          <el-input v-model="apiSettings.modelName" placeholder="请输入模型名称，默认: gpt-4.1-mini"></el-input>
-        </el-form-item>
-
-        <div class="api-vip-tip">
-=======
       <el-form :model="apiSettings" label-width="80px" label-position="left" style="--el-form-item-label-width: 120px; --el-form-item-content-width: calc(100% - 120px - 3ch);">
         <el-form-item label="API地址">
           <el-input v-model="apiSettings.apiUrl" placeholder="如: https://api.example.com" style="width: calc(100% - 3ch);"></el-input>
@@ -132,22 +109,11 @@
         </el-form-item>
 
         <div class="api-vip-tip" style="margin-bottom: 20px;">
->>>>>>> 30d2114 (000)
           <el-alert type="success" show-icon title="使用自定义API可享受无限制使用权限"
             description="当您同时设置了API地址和API密钥，将不受每日使用次数的限制。如有需要，请自行联系我获取" :closable="false">
           </el-alert>
         </div>
 
-<<<<<<< HEAD
-        <div class="api-settings-footer">
-          <el-button @click="resetApiSettings" size="small">恢复默认</el-button>
-          <div class="spacer"></div>
-          <el-button @click="apiSettingsVisible = false">取消</el-button>
-          <el-button type="primary" @click="saveApiSettings">保存</el-button>
-        </div>
-      </el-form>
-
-=======
         <div class="api-settings-footer" style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 20px;">
           <el-button @click="resetApiSettings" size="small">恢复默认</el-button>
           <div>
@@ -156,22 +122,15 @@
           </div>
         </div>
       </el-form>
->>>>>>> 30d2114 (000)
       <div class="api-settings-info">
         <el-alert title="什么是自定义API设置?" type="info" description="如果你有自己的API服务或密钥，可以在这里配置。如果不确定这些设置，请保持默认值。"
           :closable="false" show-icon>
         </el-alert>
       </div>
     </el-dialog>
-<<<<<<< HEAD
-
-    <div class="contact-info">
-      <p>没时间自行优化的可以联系我帮忙优化，邮箱：<a href="mailto:slow@linux.do">slow@linux.do</a></p>
-=======
     
     <div class="contact-info">
       <p>©AI文章优化工具  <a href="mailto:slow@linux.do"> thesis.pblog.fun</a></p>
->>>>>>> 30d2114 (000)
     </div>
   </div>
 </template>
@@ -190,11 +149,7 @@ export default {
       loadingDots: '',
       loadingInterval: null,
       usageCount: 0,
-<<<<<<< HEAD
-      usageLimit: 5,
-=======
       usageLimit: 10,
->>>>>>> 30d2114 (000)
       usageLimitReached: false,
       // API设置相关
       apiSettingsVisible: false,
@@ -706,42 +661,6 @@ export default {
 </script>
 
 <style scoped>
-<<<<<<< HEAD
-.article-optimizer {
-  max-width: 1000px;
-  margin: 0 auto;
-  padding: 20px;
-}
-
-.optimizer-card {
-  margin-top: 20px;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
-  border-radius: 8px;
-}
-
-.input-section,
-.output-section {
-  margin-bottom: 20px;
-}
-
-.action-section {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  margin: 20px 0;
-}
-
-.usage-info {
-  display: flex;
-  flex-direction: column;
-  width: 200px;
-}
-
-.usage-text {
-  font-size: 12px;
-  color: #606266;
-  margin-top: 5px;
-=======
 /* 全局容器样式 */
 .article-optimizer {
   max-width: 1200px;
@@ -871,87 +790,10 @@ export default {
   color: #606266;
   margin-top: 12px;
   display: block;
->>>>>>> 30d2114 (000)
 }
 
 .custom-api-text {
   color: #67c23a;
-<<<<<<< HEAD
-  font-weight: bold;
-}
-
-.vip-badge {
-  background-color: #67c23a;
-  color: white;
-  padding: 5px 10px;
-  border-radius: 4px;
-  font-size: 14px;
-  font-weight: bold;
-  margin-bottom: 5px;
-  display: inline-flex;
-  align-items: center;
-  max-width: fit-content;
-}
-
-.vip-badge i {
-  margin-right: 5px;
-  font-size: 16px;
-}
-
-.api-vip-tip {
-  margin: 15px 0;
-}
-
-.action-buttons {
-  display: flex;
-  gap: 10px;
-  align-items: center;
-}
-
-.output-actions {
-  margin-top: 20px;
-  display: flex;
-  justify-content: flex-end;
-  gap: 10px;
-}
-
-h1 {
-  color: #409EFF;
-  text-align: center;
-  margin-bottom: 30px;
-  font-weight: 600;
-}
-
-h3 {
-  margin-bottom: 15px;
-  color: #606266;
-}
-
-.result-container {
-  padding: 15px;
-  background-color: #f8f9fa;
-  border-radius: 8px;
-  position: relative;
-  box-shadow: inset 0 0 5px rgba(0, 0, 0, 0.05);
-}
-
-.fixed-textarea>>>.el-textarea__inner {
-  resize: none !important;
-  overflow-y: scroll !important;
-  min-height: 250px;
-  max-height: 250px;
-  border-radius: 8px;
-  transition: border-color 0.3s;
-}
-
-.fixed-textarea>>>.el-textarea__inner:hover,
-.fixed-textarea>>>.el-textarea__inner:focus {
-  border-color: #409EFF;
-}
-
-.text-section {
-  margin-bottom: 20px;
-=======
   font-weight: 500;
 }
 
@@ -1007,46 +849,19 @@ h3 {
 /* 文本区域样式 */
 .text-section {
   margin-bottom: 30px;
->>>>>>> 30d2114 (000)
 }
 
 .text-label {
   font-weight: bold;
-<<<<<<< HEAD
-  margin-bottom: 10px;
-  color: #409EFF;
-=======
   margin-bottom: 15px;
   color: #409EFF;
   font-size: 18px;
   display: block;
->>>>>>> 30d2114 (000)
 }
 
 .text-content {
   white-space: pre-wrap;
   border: 1px solid #DCDFE6;
-<<<<<<< HEAD
-  border-radius: 8px;
-  padding: 15px;
-  background-color: #fff;
-  min-height: 100px;
-  max-height: 300px;
-  overflow-y: auto;
-  line-height: 1.6;
-  font-size: 14px;
-  transition: box-shadow 0.3s;
-}
-
-.text-content:hover {
-  box-shadow: 0 0 8px rgba(64, 158, 255, 0.1);
-}
-
-.text-content::-webkit-scrollbar {
-  width: 8px;
-  height: 8px;
-  background-color: #f5f7fa;
-=======
   border-radius: 16px;
   padding: 25px;
   background-color: white;
@@ -1071,32 +886,17 @@ h3 {
   height: 10px;
   background-color: #f5f7fa;
   border-radius: 5px;
->>>>>>> 30d2114 (000)
 }
 
 .text-content::-webkit-scrollbar-thumb {
   background-color: #c0c4cc;
-<<<<<<< HEAD
-  border-radius: 4px;
-=======
   border-radius: 5px;
->>>>>>> 30d2114 (000)
 }
 
 .text-content::-webkit-scrollbar-thumb:hover {
   background-color: #909399;
 }
 
-<<<<<<< HEAD
-:deep(.highlight) {
-  background-color: #ffecb3;
-  border-radius: 3px;
-  padding: 0 2px;
-  display: inline;
-  box-shadow: 0 0 0 1px rgba(255, 193, 7, 0.3);
-}
-
-=======
 /* 高亮文本样式 */
 :deep(.highlight) {
   background-color: #ffecb3;
@@ -1108,20 +908,10 @@ h3 {
 }
 
 /* 修改后内容样式 */
->>>>>>> 30d2114 (000)
 .modified-content {
   color: #333;
 }
 
-<<<<<<< HEAD
-.contact-info {
-  text-align: center;
-  margin-top: 20px;
-  padding: 10px;
-  color: #606266;
-  font-size: 14px;
-  border-top: 1px dashed #DCDFE6;
-=======
 /* 输出操作按钮组 */
 .output-actions {
   margin-top: 30px;
@@ -1291,17 +1081,13 @@ h3 {
   background-color: rgba(255, 255, 255, 0.8);
   box-shadow: 0 8px 24px rgba(0, 0, 0, 0.05);
   animation: fadeInUp 0.8s ease-out 0.8s both;
->>>>>>> 30d2114 (000)
 }
 
 .contact-info a {
   color: #409EFF;
   text-decoration: none;
   transition: color 0.3s;
-<<<<<<< HEAD
-=======
   font-weight: 500;
->>>>>>> 30d2114 (000)
 }
 
 .contact-info a:hover {
@@ -1309,46 +1095,6 @@ h3 {
   text-decoration: underline;
 }
 
-<<<<<<< HEAD
-/* API设置对话框样式 */
-.api-settings-dialog {
-  border-radius: 8px;
-}
-
-.api-settings-dialog>>>.el-dialog__header {
-  padding: 20px 20px 10px;
-  border-bottom: 1px solid #ebeef5;
-}
-
-.api-settings-dialog>>>.el-dialog__body {
-  padding: 20px;
-}
-
-.api-settings-dialog>>>.el-form-item__label {
-  font-weight: 500;
-}
-
-.form-tip {
-  font-size: 12px;
-  color: #909399;
-  margin-top: 4px;
-  line-height: 1.4;
-}
-
-.api-settings-footer {
-  display: flex;
-  align-items: center;
-  margin-top: 20px;
-  margin-bottom: 10px;
-}
-
-.spacer {
-  flex: 1;
-}
-
-.api-settings-info {
-  margin-top: 25px;
-=======
 /* 动画效果 */
 @keyframes fadeInUp {
   from {
@@ -1430,6 +1176,5 @@ h3 {
   border-radius: 20px;
   transition: width 1s ease;
   height: 12px !important;
->>>>>>> 30d2114 (000)
 }
 </style>
