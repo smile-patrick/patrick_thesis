@@ -6,11 +6,7 @@ module.exports = defineConfig({
   pages: {
     index: {
       entry: 'src/main.js',
-<<<<<<< HEAD
-      title: '文章内容优化平台', // 这里修改为你想要的网页标题
-=======
       title: '文章AI降重平台', // 这里修改为你想要的网页标题
->>>>>>> 30d2114 (000)
     }
   }
 })
